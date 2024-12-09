@@ -1,0 +1,61 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #386641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.prihlaseni {
+    color: red;
+
+}
+.reservation-container {
+    background: #f2e8cf;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+.reservation-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.reservation-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.reservation-container input[type="text"],
+.reservation-container input[type="email"],
+.reservation-container input[type="datetime-local"],
+.reservation-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.reservation-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #bc4749 50%, #a7c957 50%);
+    background-size: 200%;
+    transition: ease-out 0.4s;
+}
+.reservation-container button:hover {
+    background-position: right;
+}
+
+
