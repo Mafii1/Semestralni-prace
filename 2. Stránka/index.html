@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Přihlášení</h1>
+        <form action="/prihlaseni" method="POST">
+            <label for="username">Uživatelské jméno</label>
+            <input type="text" id="username" name="username" placeholder="Zadejte uživatelské jméno" required>
+            
+            <label for="password">Heslo</label>
+            <input type="password" id="password" name="password" placeholder="Zadejte heslo" required>
+            
+            <button type="submit">Přihlásit se</button>
+        </form>
+        <p>Nemáte účet? <a href="/registrace">Registrujte se</a>.</p>
+    </div>
+</body>
+</html>
