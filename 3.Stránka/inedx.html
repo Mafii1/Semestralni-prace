@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="order-container">
+        <h1>Objednávka jídel</h1>
+        <form action="/odeslat-objednavku" method="POST">
+            <label for="name">Vaše jméno</label>
+            <input type="text" id="name" name="name" placeholder="Zadejte své jméno" required>
+            
+            <label for="address">Adresa doručení</label>
+            <input type="text" id="address" name="address" placeholder="Zadejte svou adresu" required>
+            
+            <label for="phone">Telefonní číslo</label>
+            <input type="number" id="phone" name="phone" placeholder="Zadejte své telefonní číslo" required>
+            <label for="meal">Vyberte jídlo</label>
+            <select id="meal" name="meal" required>
+                <option value="syr">Šlehaný kozí sýr, marinované švestky, hruškové čatní, pekanové ořechy, focaccia</option>
+                <option value="losos">Grilovaný losos s bylinkovou omáčkou</option>
+                <option value="burger">Hovězí burger s karamelizovanou cibulkou</option>
+                <option value="salát">Caesar salát s kuřecím masem a krutony</option>
+            </select>
+            
+            <label for="quantity">Počet porcí</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required >
+        
+
+            <label for="weight">Velikost porce</label>
+            <input type="range" min="100" max="600" value="50" class="slider" id="slider" required>
+            <p>Hmotnost: <span id="demo"></span>g</p>
+           <script>
+                var slider = document.getElementById("slider");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+            <label for="note">Poznámka (volitelné)</label>
+            <input type="text" id="note" name="note" placeholder="Zadejte poznámku (např. bez cibule)">
+            
+            <button type="submit">Odeslat objednávku</button>
+</body>
+</html>
